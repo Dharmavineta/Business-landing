@@ -21,7 +21,7 @@ const Process = () => {
         {gridItems.map((item, i, arr) => (
           <div
             key={item.id}
-            className={`rounded-xl p-5 transition-all duration-300`}
+            className={`rounded-xl shadow-sm hover:shadow-md p-5 transition-all duration-300`}
           >
             <div className={`flex flex-col gap-y-5`}>
               <div

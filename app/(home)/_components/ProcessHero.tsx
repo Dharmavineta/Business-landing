@@ -5,9 +5,9 @@ import React from "react";
 
 const ProcessHero = () => {
   return (
-    <div className="bg-projectBlack h-screen w-full">
+    <div className="bg-projectBlack min-h-screen py-10 w-full flex items-center">
       <div className="max-w-[1440px] mx-auto h-full relative ">
-        <div className="flex flex-col gap-y-10 lg:gap-y-0 lg:gap-x-10 h-full items-center lg:flex-row lg:items-center">
+        <div className="flex flex-col gap-y-10 lg:gap-y-0 lg:gap-x-10 h-full items-center lg:flex-row lg:items-center justify-center">
           <div className="mt-28 lg:mt-0 relative lg:w-1/2">
             <Image
               src={"/2nd.jpg"}
