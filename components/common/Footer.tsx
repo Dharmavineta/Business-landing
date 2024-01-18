@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="mt-10" />
-        <div className="flex flex-col gap-y-10 lg:gap-y-0 lg:flex-row lg:justify-around py-10 ">
+        <div className="flex flex-col gap-y-10 md:gap-y-0 md:flex-row md:justify-around py-10 ">
           <div className="flex flex-col">
             <h1 className="text-white font-bold">Copyright by</h1>
             <p className="text-slate-300">Krishna Bharadwaj</p>
