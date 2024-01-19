@@ -1,5 +1,6 @@
 import Container from "@/components/common/Container";
 import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
 import Image from "next/image";
 import React from "react";
 
@@ -27,7 +28,8 @@ const data = [
 const IndProject = () => {
   return (
     <div>
-      <Container className="mb-28">
+      <Navbar />
+      <Container className="pt-24 pb-24">
         <div className="mt-10 w-full text-black  ">
           <div className="px-10 relative w-full">
             <div className="w-full h-64 relative">

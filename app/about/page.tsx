@@ -4,15 +4,19 @@ import Stats from "./_components/Stats";
 import Mission from "./_components/Mission";
 import Team from "./_components/Team";
 import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
 
 const About = () => {
   return (
     <div>
-      <AboutHero />
-      <Stats />
-      <Mission />
-      <Team />
-      <Footer />
+      <Navbar />
+      <div className="pt-24">
+        <AboutHero />
+        <Stats />
+        <Mission />
+        <Team />
+        <Footer />
+      </div>
     </div>
   );
 };

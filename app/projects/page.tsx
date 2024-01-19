@@ -1,8 +1,9 @@
 import Container from "@/components/common/Container";
 import Footer from "@/components/common/Footer";
-import { ArrowRight } from "lucide-react";
+import Navbar from "@/components/common/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const data = [
@@ -46,36 +47,45 @@ const data = [
 
 const Projects = () => {
   return (
-    <div className="text-white mt-28">
-      <Container className="py-10">
-        <div className="bg-projectBlack py-10 flex items-center justify-center">
-          <h1 className="text-4xl lg:text-6xl text-center">Our Portfolio</h1>
-        </div>
-        <div className="mt-20 px-10 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-          {data.map((item, i, arr) => (
-            <Link
-              href={`/projects/${item.id}`}
-              key={item.id}
-              className="cursor-pointer"
-            >
-              <div className="relative">
-                <Image
-                  src={item.pic}
-                  alt=""
-                  width={500}
-                  height={500}
-                  className="rounded-3xl"
-                />
-              </div>
-              <h1 className="font-bold text-lg mt-2 text-black">
-                {item.title}
+    <div>
+      <Navbar />
+      <div className="pt-24">
+        <div className="text-white ">
+          <Container className="py-10">
+            <div className="bg-projectBlack py-10 flex items-center justify-center">
+              <h1 className="text-4xl lg:text-6xl text-center">
+                Our Portfolio
               </h1>
-              <p className="text-sm text-slate-800 mt-1">{item.description}</p>
-            </Link>
-          ))}
+            </div>
+            <div className="mt-20 px-10 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+              {data.map((item, i, arr) => (
+                <Link
+                  href={`/projects/${item.id}`}
+                  key={item.id}
+                  className="cursor-pointer"
+                >
+                  <div className="relative">
+                    <Image
+                      src={item.pic}
+                      alt=""
+                      width={500}
+                      height={500}
+                      className="rounded-3xl"
+                    />
+                  </div>
+                  <h1 className="font-bold text-lg mt-2 text-black">
+                    {item.title}
+                  </h1>
+                  <p className="text-sm text-slate-800 mt-1">
+                    {item.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </Container>
+          <Footer />
         </div>
-      </Container>
-      <Footer />
+      </div>
     </div>
   );
 };
